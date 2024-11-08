@@ -18,14 +18,17 @@ function displayTasks() {
         console.log(taskDate, "task date")
         const listEachItem = document.createElement("li")
 
-        listEachItem.id = `task-item-${task.id}`;
+        // listEachItem.id = `task-item-${task.id}`;
         listEachItem.innerHTML = `
         ${taskDate === currentDate ? "<span>Today</span>" : `<span>${formattedDateTime.formattedDate}</span>`}
         <br>
+        <div id="task-item-${task.id}">
         <span id="task-text-${task.id}">${task.text}</span> <span>${formattedDateTime.formattedTime}</span>
         <br>
         <button class="edit-btn" onclick="handleEditTask(${task.id})">Edit</button>
-        <button class="delete-btn" onclick="handleDeleteTask(${task.id})">Delete</button>`;
+        <button class="delete-btn" onclick="handleDeleteTask(${task.id})">Delete</button>
+        </div>
+        `;
 
         if (taskDate < currentDate) {
             dueTaskListForDisplay.appendChild(listEachItem);
