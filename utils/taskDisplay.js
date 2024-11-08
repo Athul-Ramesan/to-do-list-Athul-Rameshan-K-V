@@ -1,10 +1,10 @@
 
-function displayTasks() {
+function displayTasks(allTasks = getTasks()) {
     const dueTaskListForDisplay = document.getElementById("due-task-list")
     const upComingTaskListForDisplay = document.getElementById("upcoming-task-list")
     const todayTaskListForDisplay = document.getElementById("today-task-list")
 
-    const allTasks = getTasks()
+    
     console.log(allTasks, "all tasks")
     dueTaskListForDisplay.innerHTML = ""
     upComingTaskListForDisplay.innerHTML = ""

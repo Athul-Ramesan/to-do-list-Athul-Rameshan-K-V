@@ -32,9 +32,19 @@ function cancelEdit(taskId, originalText) {
         <button class="delete-btn" onclick="handleDeleteTask(${taskId})">Delete</button>
     `;
 }
-function handleDeleteTask (taskId){
+function handleDeleteTask(taskId) {
     const allTasks = getTasks()
-    const updatedTasks = allTasks.filter((task)=> task.id !== taskId)
+    const updatedTasks = allTasks.filter((task) => task.id !== taskId)
     saveTasks(updatedTasks)
     displayTasks()
+}
+function handleFilterTask() {
+ 
+    const searchInputElement = document.getElementById("search-task-input")
+    const searchInputText = searchInputElement.value.toLowerCase()
+    const allTasks = getTasks()
+    const filteredTasks = allTasks.filter((task)=>{
+        return task.text.toLowerCase().includes(searchInputText)
+    })
+    displayTasks(filteredTasks);
 }

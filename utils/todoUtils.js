@@ -14,13 +14,3 @@ function addTodo(task) {
     saveTasks(existingTasks)
 }
 
-function editTask(taskId, newText) {
-    const allTasks = getTasks()
-    for (let task of allTasks) {
-        if (task[taskId]) {
-            task.text = newText || task.text
-        }
-    }
-    console.log(allTasks, "all tasks")
-    saveTasks(allTasks)
-}
