@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do</title>
 </head>
+
 <body>
     <main>
         <header>
@@ -16,9 +18,18 @@
                 <input class="add-todo-input" type="text" placeholder="Type task here..." required>
                 <button type="submit" id="todo-button">Add Task</button>
             </form>
+            <div id="filter-section">
+                <input type="text" id="search-task-input" placeholder="Search Task...">
+                <select name="" id="filter-status">
+                    <option id="filter-all" value="all">All</option>
+                    <option id="filter-active" value="active">Active</option>
+                    <option id="filter-completed" value="completed">Completed</option>
+                </select>
+            </div>
         </section>
     </main>
-        
+
     <script src="src/script.js"></script>
 </body>
+
 </html>
