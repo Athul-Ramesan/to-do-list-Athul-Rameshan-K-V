@@ -3,7 +3,7 @@ const todo = ()=>{
     const addTaskInput = document.getElementById("add-todo-input")
     const dueDateInput = document.getElementById("due-date")
     const todoForm = document.getElementById("todo-form")
-
+    displayTasks()
     const handleAddTask = (e)=>{
         e.preventDefault()
         const text = addTaskInput.value.trim()
@@ -16,6 +16,7 @@ const todo = ()=>{
             addTodo(newTask)
             addTaskInput.value=""
             dueDateInput.value = ""
+            displayTasks();
         }
     }
     todoForm.addEventListener("submit", handleAddTask)

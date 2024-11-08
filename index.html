@@ -14,39 +14,40 @@
             <h1 class="heading" id="make-todo-head">Make Your To Do</h1>
         </header>
         <section id="todo-section">
-            <form id="todo-form">
-                <label for="">New Task: </label>
-                <input id="add-todo-input" type="text" placeholder="Type task here..." required>
-                <input type="datetime-local" id="due-date" required>
-                <button type="submit" id="todo-button">Add Task</button>
-            </form>
             <div id="filter-section">
-                <input type="text" id="search-task-input" placeholder="Search Task...">
+                <input type="text" id="search-task-input" placeholder="Search Task..."
+                oninput="handleFilterTask()">
                 <select name="" id="filter-status">
                     <option id="filter-all" value="all">All</option>
                     <option id="filter-active" value="active">Active</option>
                     <option id="filter-completed" value="completed">Completed</option>
                 </select>
             </div>
+            <form id="todo-form">
+                <label for="">New Task: </label>
+                <input id="add-todo-input" type="text" placeholder="Type task here..." required>
+                <input type="datetime-local" id="due-date" required>
+                <button type="submit" id="todo-button">Add Task</button>
+            </form>
         </section>
-        <section id="todo-list">
 
-        </section>
-        <template id="todo-item-template">
-            <div id="todo-single-item-card">
-                <input type="checkbox" class="todo-checkbox">
-                <span id="todo-text"> </span>
-                <span id="due-date"> </span>
-                <div class="modify-btns">
-                    <button id="edit-item-btn">Edit</button>
-                    <button id="delete-item-btn">Delete</button>
-                </div>
+        <div id="task-list-container">
+
+            <div id="today-task">
+                <h3>Due Tasks</h3>
+                <ul id="due-task-list"></ul>
+                <h2>Today</h2>
+                <ul id="today-task-list"></ul>
+                <h3>Upcoming Tasks</h3>
+                <ul id="upcoming-task-list"></ul>
             </div>
-        </template>
+        </div>
     </main>
 
     <script src="./utils/storage.js"></script>
     <script src="./utils/todoUtils.js"></script>
+    <script src="./utils/taskDisplay.js"></script>
+    <script src="./utils/eventHandlers.js"></script>
     <script src="script.js"></script>
 </body>
 
