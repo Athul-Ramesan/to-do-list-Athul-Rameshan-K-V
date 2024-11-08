@@ -19,44 +19,84 @@ section {
     border: #fff;
     border-radius: 8px;
 }
-/* #delete-item-btn{
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 6px 10px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-} */
+#todo-section {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+}
+header .heading {
+    color: white;
+    font-family: inherit; /* Inherits from body */
+}
+#todo-form input[type="text"],
+#todo-form input[type="datetime-local"] {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px;
+    margin: 10px 0;
+    width: 100%;
+}
+
 h1 {
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
     color: #2c3e50;
 }
-input[type="text"] {
-    /* width: calc(100% - 50px); */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    outline: none;
-    margin-bottom: 5px;
-  }
-#todo-single-item-card {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 36px;
-    gap: 10px;
-    justify-content:space-between ;
-    border: 1px solid #2c3e50;
-    padding: 2px;
-    justify-items: center;
+
+#todo-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
-.modify-btns{
-    display: flex;
-    justify-content: end;
-    gap: 6px;
+
+#todo-button:hover {
+    background-color: #388e3c;
+}
+#task-list-container {
+    background-color: #e8f5e9;
+    color: inherit;
+    padding: 20px;
+}
+#due-task-list li,
+#today-task-list li,
+#upcoming-task-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.edit-btn {
+    background-color: #ffca28;
+    color: #333;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.edit-btn:hover {
+    background-color: #fbc02d;
+}
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+#empty-state-message {
+    background-color: #ffecb3;
+    color: #795548;
+    padding: 20px;
+    border: 1px solid #ffcc80;
+    text-align: center;
+}
+h3, h2 {
+    color: #3f51b5;
+}
+.task-time {
+    color: #0a0000;
 }
