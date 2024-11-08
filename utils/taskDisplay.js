@@ -17,12 +17,12 @@ function displayTasks() {
        const taskDate = task.dueDate.split("T")[0]; 
         console.log(taskDate, "task date")
         const listEachItem = document.createElement("li")
-        console.log(task.dueDate, "due date::::::::::::::::")
 
+        listEachItem.id = `task-item-${task.id}`;
         listEachItem.innerHTML = `
         ${taskDate === currentDate ? "<span>Today</span>" : `<span>${formattedDateTime.formattedDate}</span>`}
         <br>
-        <span>${task.text}</span> <span>${formattedDateTime.formattedTime}</span>
+        <span id="task-text-${task.id}">${task.text}</span> <span>${formattedDateTime.formattedTime}</span>
         <br>
         <button class="edit-btn" onclick="handleEditTask(${task.id})">Edit</button>
         <button class="delete-btn" onclick="handleDeleteTask(${task.id})">Delete</button>`;
