@@ -29,24 +29,23 @@
                 </select>
             </div>
         </section>
-        <section id="todo-list">
 
-        </section>
-        <template id="todo-item-template">
-            <div id="todo-single-item-card">
-                <input type="checkbox" class="todo-checkbox">
-                <span id="todo-text"> </span>
-                <span id="due-date"> </span>
-                <div class="modify-btns">
-                    <button id="edit-item-btn">Edit</button>
-                    <button id="delete-item-btn">Delete</button>
-                </div>
+        <div id="task-list-container">
+
+            <div id="today-task">
+                <h3>Due Tasks</h3>
+                <ul id="due-task-list"></ul>
+                <h2>Today</h2>
+                <ul id="today-task-list"></ul>
+                <h3>Upcoming Tasks</h3>
+                <ul id="upcoming-task-list"></ul>
             </div>
-        </template>
+        </div>
     </main>
 
     <script src="./utils/storage.js"></script>
     <script src="./utils/todoUtils.js"></script>
+    <script src="./utils/taskDisplay.js"></script>
     <script src="script.js"></script>
 </body>
 
