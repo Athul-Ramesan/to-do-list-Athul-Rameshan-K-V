@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <section>
-        <h1 class="heading" id="make-todo-head">Make Your To Do</h1>
-    </section>
+    <main>
+        <header>
+            <h1 class="heading" id="make-todo-head">Make Your To Do</h1>
+        </header>
+        <section id="todo-section">
+            <form id="todo-form">
+                <label for="">New Task: </label>
+                <input class="add-todo-input" type="text" placeholder="Type task here..." required>
+                <button type="submit" id="todo-button">Add Task</button>
+            </form>
+            <div id="filter-section">
+                <input type="text" id="search-task-input" placeholder="Search Task...">
+                <select name="" id="filter-status">
+                    <option id="filter-all" value="all">All</option>
+                    <option id="filter-active" value="active">Active</option>
+                    <option id="filter-completed" value="completed">Completed</option>
+                </select>
+            </div>
+        </section>
+        <section id="todo-list">
+                
+        </section>
+        <template id="todo-item-template">
+            <div id="todo-single-item-card">
+                <p id="todo-single-item">Clean the room</p>
+                <div class="modify-btns">
+                    <button id="edit-item-btn">Edit</button>
+                    <button id="delete-item-btn">Delete</button>
+                </div>
+            </div>
+        </template>
+    </main>
 
     <script src="src/script.js"></script>
 </body>
+
 </html>

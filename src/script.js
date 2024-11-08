@@ -1,6 +1,6 @@
 const todo = ()=>{
     const makeToDoheading = document.getElementById("make-todo-head")
-    makeToDoheading.style.color = "red"
+    // makeToDoheading.style.color = "red"
 }
 
 
