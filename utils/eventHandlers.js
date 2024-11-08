@@ -32,3 +32,9 @@ function cancelEdit(taskId, originalText) {
         <button class="delete-btn" onclick="handleDeleteTask(${taskId})">Delete</button>
     `;
 }
+function handleDeleteTask (taskId){
+    const allTasks = getTasks()
+    const updatedTasks = allTasks.filter((task)=> task.id !== taskId)
+    saveTasks(updatedTasks)
+    displayTasks()
+}
