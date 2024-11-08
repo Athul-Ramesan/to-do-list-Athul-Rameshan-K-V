@@ -6,10 +6,19 @@
     <title>To Do</title>
 </head>
 <body>
-    <section>
-        <h1 class="heading" id="make-todo-head">Make Your To Do</h1>
-    </section>
-
+    <main>
+        <header>
+            <h1 class="heading" id="make-todo-head">Make Your To Do</h1>
+        </header>
+        <section id="todo-section">
+            <form id="todo-form">
+                <label for="">New Task: </label>
+                <input class="add-todo-input" type="text" placeholder="Type task here..." required>
+                <button type="submit" id="todo-button">Add Task</button>
+            </form>
+        </section>
+    </main>
+        
     <script src="src/script.js"></script>
 </body>
 </html>
