@@ -16,7 +16,8 @@
         <section id="todo-section">
             <form id="todo-form">
                 <label for="">New Task: </label>
-                <input class="add-todo-input" type="text" placeholder="Type task here..." required>
+                <input id="add-todo-input" type="text" placeholder="Type task here..." required>
+                <input type="datetime-local" id="due-date" required>
                 <button type="submit" id="todo-button">Add Task</button>
             </form>
             <div id="filter-section">
@@ -29,11 +30,13 @@
             </div>
         </section>
         <section id="todo-list">
-                
+
         </section>
         <template id="todo-item-template">
             <div id="todo-single-item-card">
-                <p id="todo-single-item">Clean the room</p>
+                <input type="checkbox" class="todo-checkbox">
+                <span id="todo-text"> </span>
+                <span id="due-date"> </span>
                 <div class="modify-btns">
                     <button id="edit-item-btn">Edit</button>
                     <button id="delete-item-btn">Delete</button>

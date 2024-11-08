@@ -1,6 +1,9 @@
 const todo = ()=>{
-    const makeToDoheading = document.getElementById("make-todo-head")
-    // makeToDoheading.style.color = "red"
+    const addTaskInput = document.getElementById("add-todo-input")
+    const dueDate = document.getElementById("due-date")
+    const todoForm = document.getElementById("todo-form")
+    
+
 }
 
 
