@@ -17,14 +17,8 @@
             <div id="filter-section">
                 <input type="text" id="search-task-input" placeholder="Search Task..."
                 oninput="handleFilterTask()">
-                <select name="" id="filter-status">
-                    <option id="filter-all" value="all">All</option>
-                    <option id="filter-active" value="active">Active</option>
-                    <option id="filter-completed" value="completed">Completed</option>
-                </select>
             </div>
             <form id="todo-form">
-                <label for="">New Task: </label>
                 <input id="add-todo-input" type="text" placeholder="Type task here..." required>
                 <input type="datetime-local" id="due-date" required>
                 <button type="submit" id="todo-button">Add Task</button>

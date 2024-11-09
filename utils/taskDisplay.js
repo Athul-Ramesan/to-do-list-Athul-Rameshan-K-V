@@ -18,7 +18,6 @@ function displayTasks(allTasks = getTasks()) {
         console.log(taskDate, "task date")
         const listEachItem = document.createElement("li")
 
-        // listEachItem.id = `task-item-${task.id}`;
         listEachItem.innerHTML = `
         ${taskDate === currentDate ? "<span>Today</span>" : `<span>${formattedDateTime.formattedDate}</span>`}
         <br>
@@ -37,6 +36,7 @@ function displayTasks(allTasks = getTasks()) {
         } else {
             todayTaskListForDisplay.appendChild(listEachItem)
         }
+        console.log(todayTaskListForDisplay, "today tasklist")
     })
 }
 
