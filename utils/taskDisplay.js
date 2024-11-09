@@ -5,17 +5,14 @@ function displayTasks(allTasks = getTasks()) {
     const todayTaskListForDisplay = document.getElementById("today-task-list")
 
     
-    console.log(allTasks, "all tasks")
     dueTaskListForDisplay.innerHTML = ""
     upComingTaskListForDisplay.innerHTML = ""
 
     const currentDate = new Date().toISOString().split("T")[0];
-    console.log(currentDate)
 
     allTasks.forEach((task, index) => {
         const formattedDateTime = formatDateAndTime(task.dueDate)
        const taskDate = task.dueDate.split("T")[0]; 
-        console.log(taskDate, "task date")
         const listEachItem = document.createElement("li")
 
         listEachItem.innerHTML = `
@@ -36,7 +33,6 @@ function displayTasks(allTasks = getTasks()) {
         } else {
             todayTaskListForDisplay.appendChild(listEachItem)
         }
-        console.log(todayTaskListForDisplay, "today tasklist")
     })
 }
 
