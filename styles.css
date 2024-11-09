@@ -26,7 +26,7 @@ section {
 }
 header .heading {
     color: white;
-    font-family: inherit; /* Inherits from body */
+    font-family: inherit;
 }
 #todo-form input[type="text"],
 #todo-form input[type="datetime-local"] {
@@ -36,6 +36,11 @@ header .heading {
     padding: 8px;
     margin: 10px 0;
     width: 100%;
+}
+#todo-form{
+    display: flex;
+    width: 60%;
+
 }
 
 h1 {
@@ -51,6 +56,9 @@ h1 {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    width: 20%;
+    height: 50%;
+    justify-items: center;
 }
 
 #todo-button:hover {
